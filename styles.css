@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to right, hsl(200, 100%, 50%), hsl(175, 100%, 50%));
+    /* background: red; */
+}
+
+.neck-container,
+.neck-container-note-names {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.neck-container:after {
+    content: '';
+    height: 10px;
+    width: 10px;
+    background-color: beige;
+
+}
+
+.fret {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 55px;
+    box-shadow: 1px -4px 62px -14px rgba(209, 253, 81, 0.75);
+    -webkit-box-shadow: 1px -4px 62px -14px rgba(209, 253, 81, 0.75);
+    -moz-box-shadow: 1px -4px 62px -14px rgba(209, 253, 81, 0.75);
+
+}
+
+.first-fret {
+    position: absolute;
+    margin-left: 44px;
+}
+
+.third-fret {
+    position: absolute;
+    margin-left: 124px;
+}
+
+.fifth-fret {
+    position: absolute;
+    margin-left: 204px;
+}
+
+.seventh-fret {
+    position: absolute;
+    margin-left: 284px;
+}
+
+.ninth-fret {
+    position: absolute;
+    margin-left: 364px;
+}
+
+.twelfth-fret-top {
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 484px;
+}
+
+.twelfth-fret-bottom {
+    position: absolute;
+    margin-top: 85px;
+    margin-left: 484px;
+}
+
+.e-string-container,
+.a-string-container,
+.d-string-container,
+.g-string-container {
+    display: flex;
+}
+
+.open-note {
+    height: 30px;
+    background: rgb(106, 1, 1);
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-right: 3px solid gray;
+}
+
+.open-note::after {
+    content: '';
+    width: 30px;
+    height: 10px;
+    background-color: gray;
+    margin: 0;
+}
+
+.note.top,
+.open-note.top {
+    background: linear-gradient(180deg, rgba(2, 0, 36, 0.9108237044817927) 0%, rgba(106, 1, 1, 1) 18%);
+}
+
+.note.bottom,
+.open-note.bottom {
+    background: linear-gradient(180deg, rgba(106, 1, 1, 1) 89%, rgba(2, 0, 36, 0.9108237044817927) 100%);
+}
+
+.note {
+    width: 40px;
+    height: 30px;
+    background: rgba(106, 1, 1, 0.936);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-right: 3px solid gray;
+}
+
+
+
+.note::after,
+.open-note::after {
+    content: '';
+    width: 40px;
+    height: 10px;
+    /* background-color: rgb(178, 178, 178); */
+    background: linear-gradient(180deg, rgba(2, 0, 36, 0.9108237044817927) 0%, rgba(161, 161, 161, 1) 53%, rgba(2, 0, 36, 1) 100%);
+    margin: 0;
+}
+
+
+.note:hover::after,
+.open-note:hover::after {
+    content: '';
+    background: linear-gradient(180deg, rgba(2, 0, 36, 0.9108237044817927) 0%, rgb(209, 209, 209) 53%, rgba(2, 0, 36, 1) 100%);
+    cursor: pointer;
+}

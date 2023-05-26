@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bass Guitar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div class="neck-container">
+        <div class="first-fret fret"></div>
+        <div class="third-fret fret"></div>
+        <div class="fifth-fret fret"></div>
+        <div class="seventh-fret fret"></div>
+        <div class="ninth-fret fret"></div>
+        <div class="twelfth-fret-top fret"></div>
+        <div class="twelfth-fret-bottom fret"></div>
+        <div class="g-string-container">
+            <div data-note="g2" class="open-note top"></div>
+            <div data-note="g-sharp-2" class="note top"></div>
+            <div data-note="a2" class="note top"></div>
+            <div data-note="a-sharp-2" class="note top"></div>
+            <div data-note="b2" class="note top"></div>
+            <div data-note="c3" class="note top"></div>
+            <div data-note="c-sharp-3" class="note top"></div>
+            <div data-note="d3" class="note top"></div>
+            <div data-note="d-sharp-3" class="note top"></div>
+            <div data-note="e3" class="note top"></div>
+            <div data-note="f3" class="note top"></div>
+            <div data-note="f-sharp-3" class="note top"></div>
+            <div data-note="g4" class="note top"></div>
+        </div>
+        <div class="d-string-container">
+            <div data-note="d2" class="open-note"></div>
+            <div data-note="d-sharp-2" class="note"></div>
+            <div data-note="e2" class="note"></div>
+            <div data-note="f2" class="note"></div>
+            <div data-note="f-sharp-2" class="note"></div>
+            <div data-note="g2" class="note"></div>
+            <div data-note="g-sharp-2" class="note"></div>
+            <div data-note="a2" class="note"></div>
+            <div data-note="a-sharp-2" class="note"></div>
+            <div data-note="b2" class="note"></div>
+            <div data-note="c3" class="note"></div>
+            <div data-note="c-sharp-3" class="note"></div>
+            <div data-note="d3" class="note"></div>
+        </div>
+        <div class="a-string-container">
+            <div data-note="a1" class="open-note"></div>
+            <div data-note="a-sharp-1" class="note"></div>
+            <div data-note="b1" class="note"></div>
+            <div data-note="c2" class="note"></div>
+            <div data-note="c-sharp-2" class="note"></div>
+            <div data-note="d2" class="note"></div>
+            <div data-note="d-sharp-2" class="note"></div>
+            <div data-note="e2" class="note"></div>
+            <div data-note="f2" class="note"></div>
+            <div data-note="f-sharp-2" class="note"></div>
+            <div data-note="g2" class="note"></div>
+            <div data-note="g-sharp-2" class="note"></div>
+            <div data-note="a2" class="note"></div>
+        </div>
+        <div class="e-string-container">
+            <div data-note="e1" class="open-note bottom"></div>
+            <div data-note="f1" class="note bottom"></div>
+            <div data-note="f-sharp-1" class="note bottom"></div>
+            <div data-note="g1" class="note bottom"></div>
+            <div data-note="g-sharp-1" class="note bottom"></div>
+            <div data-note="a1" class="note bottom"></div>
+            <div data-note="a-sharp-1" class="note bottom"></div>
+            <div data-note="b1" class="note bottom"></div>
+            <div data-note="c2" class="note bottom"></div>
+            <div data-note="c-sharp-2" class="note bottom"></div>
+            <div data-note="d2" class="note bottom"></div>
+            <div data-note="d-sharp-2" class="note bottom"></div>
+            <div data-note="e2" class="note bottom"></div>
+        </div>
+
+    </div>
+
+
+
+    <audio id="e1" src="samples/e1.mp3"></audio>
+    <audio id="f1" src="samples/f1.mp3"></audio>
+    <audio id="f-sharp-1" src="samples/f-sharp-1.mp3"></audio>
+    <audio id="g1" src="samples/g1.mp3"></audio>
+    <audio id="g-sharp-1" src="samples/g-sharp-1.mp3"></audio>
+    <audio id="a1" src="samples/a1.mp3"></audio>
+    <audio id="a-sharp-1" src="samples/a-sharp-1.mp3"></audio>
+    <audio id="b1" src="samples/b1.mp3"></audio>
+    <audio id="c2" src="samples/c2.mp3"></audio>
+    <audio id="c-sharp-2" src="samples/c-sharp-2.mp3"></audio>
+    <audio id="d2" src="samples/d2.mp3"></audio>
+    <audio id="d-sharp-2" src="samples/d-sharp-2.mp3"></audio>
+    <audio id="e2" src="samples/e2.mp3"></audio>
+    <audio id="f2" src="samples/f2.mp3"></audio>
+    <audio id="f-sharp-2" src="samples/f-sharp-2.mp3"></audio>
+    <audio id="g2" src="samples/g2.mp3"></audio>
+    <audio id="g-sharp-2" src="samples/g-sharp-2.mp3"></audio>
+    <audio id="a2" src="samples/a2.mp3"></audio>
+    <audio id="a-sharp-2" src="samples/a-sharp-2.mp3"></audio>
+    <audio id="b2" src="samples/b2.mp3"></audio>
+    <audio id="c3" src="samples/c3.mp3"></audio>
+    <audio id="c-sharp-3" src="samples/c-sharp-3.mp3"></audio>
+    <audio id="d3" src="samples/d3.mp3"></audio>
+    <audio id="d-sharp-3" src="samples/d-sharp-3.mp3"></audio>
+    <audio id="e3" src="samples/e3.mp3"></audio>
+    <audio id="f3" src="samples/f3.mp3"></audio>
+    <audio id="f-sharp-3" src="samples/f-sharp-3.mp3"></audio>
+    <audio id="g4" src="samples/g4.mp3"></audio>
+
+
+
+
+
+
+
+</body>
+
+</html>
