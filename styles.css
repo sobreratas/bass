@@ -1,188 +1,144 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;600;800&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&family=Sigmar&display=swap');
-
-*,
-*::after,
-*::before {
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --cell-size: 100px;
-    --mark-size: calc(var(--cell-size) * .9);
-}
-
 body {
-    margin: 0;
-    font-family: Inter, sans-serif;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, hsl(200, 100%, 50%), hsl(175, 100%, 50%));
+  
 }
 
-.board {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    justify-items: center;
-    align-items: center;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-}
-
-
-.cell {
-    width: var(--cell-size);
-    height: var(--cell-size);
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-}
-
-.cell.x,
-.cell.circle {
-    cursor: not-allowed;
-}
-
-
-
-.cell:first-child,
-.cell:nth-child(2),
-.cell:nth-child(3) {
-    border-top: none;
-}
-
-.cell:nth-child(3n + 1) {
-    border-left: none;
-}
-
-.cell:nth-child(3n + 3) {
-    border-right: none;
-}
-
-.cell:last-child,
-.cell:nth-child(8),
-.cell:nth-child(7) {
-    border-bottom: none;
-}
-
-/* All the before elements that make up the shapes will have a black background */
-
-.cell.x::before,
-.cell.x::after,
-.cell.circle::before {
-    background-color: black;
-}
-
-
-/* When it's X' s turn and the cell doesn't 
-have an x or a circle in it, 
-when hovering, the elements that make up 
-the shapes will have a light grey bakcground */
-
-
-.board.x .cell:not(.x):not(.circle):hover::before,
-.board.x .cell:not(.x):not(.circle):hover::after,
-.board.circle .cell:not(.x):not(.circle):hover::before {
-    background-color: lightgrey;
-}
-
-/* The elements that make up the X, and while hovering over
-an empty cell on X's turn will have this positioning
-and size. */
-
-.cell.x::before,
-.cell.x::after,
-.board.x .cell:not(.x):not(.circle):hover::before,
-.board.x .cell:not(.x):not(.circle):hover::after {
-    content: '';
+.neck-container,
+.neck-container-note-names {
     position: absolute;
-    width: calc(var(--mark-size) * .15);
-    height: var(--mark-size);
-
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
 }
 
-/* This before element that creates a part of the X
-will be rotated, even when it's X's turn and the cursor 
-hovers over an empty cell */
-.cell.x::before,
-.board.x .cell:not(.x):not(.circle):hover::before {
-    transform: rotate(45deg);
-}
-
-/* This before element that creates a part of the X
-will be rotated, even when it's X's turn and the cursor 
-hovers over an empty cell */
-.cell.x::after,
-.board.x .cell:not(.x):not(.circle):hover::after {
-    transform: rotate(-45deg);
-}
-
-/* The elements that make up the circle, and while hovering over
-an empty cell on circle's turn will have this stying (a square with border radius
-turns it into a circle) and size. */
-.cell.circle::before,
-.cell.circle::after,
-.board.circle .cell:not(.x):not(.circle):hover::before,
-.board.circle .cell:not(.x):not(.circle):hover::after {
+.neck-container:after {
     content: '';
+    height: 10px;
+    width: 10px;
+    background-color: beige;
+
+}
+
+.fret {
+    position: absolute;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 55px;
+    box-shadow: 1px -4px 62px -14px rgba(209, 253, 81, 0.75);
+    -webkit-box-shadow: 1px -4px 62px -14px rgba(209, 253, 81, 0.75);
+    -moz-box-shadow: 1px -4px 62px -14px rgba(209, 253, 81, 0.75);
+
+}
+
+.first-fret {
     position: absolute;
-
+    margin-left: 59px;
 }
 
-/* This before element that creates a part of the circle
-is given its larger size when it's circle's turn and the cursor 
-hovers over an empty cell */
-.cell.circle::before,
-.board.circle .cell:not(.x):not(.circle):hover::before {
-    width: var(--mark-size);
-    height: var(--mark-size);
+.third-fret {
+    position: absolute;
+    margin-left: 159px;
 }
 
-/* This before element that creates a part of the circle
-is given its smaller size when it's circle's turn and the cursor 
-hovers over an empty cell */
-.cell.circle::after,
-.board.circle .cell:not(.x):not(.circle):hover::after {
-    width: calc(var(--mark-size) * .7);
-    height: calc(var(--mark-size) * .7);
-    background-color: white;
+.fifth-fret {
+    position: absolute;
+    margin-left: 259px;
 }
 
-.winning-message {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, .9);
+.seventh-fret {
+    position: absolute;
+    margin-left: 359px;
+}
+
+.ninth-fret {
+    position: absolute;
+    margin-left: 459px;
+}
+
+.twelfth-fret-top {
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 609px;
+}
+
+.twelfth-fret-bottom {
+    position: absolute;
+    margin-top: 85px;
+    margin-left: 609px;
+}
+
+.e-string-container,
+.a-string-container,
+.d-string-container,
+.g-string-container {
+    display: flex;
+}
+
+.open-note {
+    height: 30px;
+    background: rgb(106, 1, 1);
+    width: 40px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 5rem;
-    flex-direction: column;
-
+    border: none;
+    border-right: 3px solid gray;
 }
 
-.winning-message button {
-    border-radius: 10px;
-    font-size: 3rem;
-    background-color: white;
-    border: 1 px solid black;
-    padding: .25em .5em;
-    cursor: pointer;
+.open-note::after {
+    content: '';
+    width: 40px;
+    height: 10px;
+    background-color: gray;
+    margin: 0;
 }
 
-.winning-message button:hover {
-    background-color: black;
-    color: white;
-    border-color: white;
+.note.top,
+.open-note.top {
+    background: linear-gradient(180deg, rgba(2, 0, 36, 0.9108237044817927) 0%, rgba(106, 1, 1, 1) 18%);
 }
 
-.winning-message.show {
+.note.bottom,
+.open-note.bottom {
+    background: linear-gradient(180deg, rgba(106, 1, 1, 1) 89%, rgba(2, 0, 36, 0.9108237044817927) 100%);
+}
+
+.note {
+    width: 50px;
+    height: 30px;
+    background: rgba(106, 1, 1, 0.936);
     display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-right: 3px solid gray;
+}
+
+
+
+.note::after,
+.open-note::after {
+    content: '';
+    width: 50px;
+    height: 10px;
+    background: linear-gradient(180deg, rgba(2, 0, 36, 0.9108237044817927) 0%, rgba(161, 161, 161, 1) 53%, rgba(2, 0, 36, 1) 100%);
+    margin: 0;
+}
+
+
+.note:hover::after,
+.open-note:hover::after {
+    content: '';
+    background: linear-gradient(180deg, rgba(2, 0, 36, 0.9108237044817927) 0%, rgb(209, 209, 209) 53%, rgba(2, 0, 36, 1) 100%);
+    cursor: pointer;
 }
