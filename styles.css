@@ -26,16 +26,78 @@ h1 {
     margin-top: 180px;
 }
 
-.main-container {
+.modal {
+    height: 300px;
+    width: 600px;
+    background-color: rgb(167, 214, 255);
+    font-family: Inter, sans-serif;
+}
+
+.modal-text {
+    width: 500px;
+    line-height: 1.5rem;
+}
+
+.clef-note-modal {
+    margin-top: -20px;
+}
+
+.note-name-modal {
+    margin-top: -60px;
+}
+
+.modal-container {
+    line-height: 1.5rem;
     position: absolute;
     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    border-radius: 15px;
+    opacity: .95;
+    box-shadow: 1px -1px 18px 1px rgba(117, 117, 117, 0.75);
+    -webkit-box-shadow: 1px -1px 18px 1px rgba(117, 117, 117, 0.75);
+    -moz-box-shadow: 1px -1px 18px 1px rgba(117, 117, 117, 0.75);
+}
+
+.modal-container.hidden {
+    visibility: hidden;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: .5rem;
+    
+    font-size: 1.7rem;
+    background: transparent;
+    border-color: transparent;
+    color: rgb(139, 0, 0);
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+    background-color: none;
+    transition: ease-in-out .1s;
+}
+
+.main-container  {
+    position: absolute;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
 
 img {
-    width: 160px;
+    width: 170px;
+    margin-right: 21px;
 }
 
 .clef-note {

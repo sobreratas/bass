@@ -7,17 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bass Guitar</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" /> -->
+    <script src="https://kit.fontawesome.com/8efc22d7af.js" crossorigin="anonymous"></script>
     <script src="app.js" defer></script>
 </head>
 
 <body>
-    <div class="top-container">
-        <h1>BASSics</h1>
-        <img class="clef-note" src="images/default.png" alt="default">
-        <span class="note-name">NOTE</span>
+
+    <div class="modal modal-container">
+        <button class="close-btn"><i class="fa-regular fa-x"></i></button>
+        <p>Welcome to <span><b>BASSics!</b></span></p><br>
+        <i>For mobile users, landscape orientation is recommended.</i><br>
+        <div class="modal-text">
+            <p>This app is designed for those learning the notes on the bass guitar. Displayed above the fretboard is
+                the
+                note name and its location on the staff. Turn up the volume and click on the strings to start rumbling! 🤘
+            </p>
+        </div>
+
     </div>
 
+
     <div class="main-container">
+        <div class="top-container">
+            <h1>BASSics</h1>
+            <img class="clef-note" src="images/default.png" alt="default">
+            <span class="note-name">NOTE</span>
+        </div>
 
         <div class="neck-container">
 
@@ -29,7 +45,9 @@
             <div class="twelfth-fret-top fret"></div>
             <div class="twelfth-fret-bottom fret"></div>
             <div class="g-string-container">
-                <div class="letter-box"><p>G</p></div>
+                <div class="letter-box">
+                    <p>G</p>
+                </div>
                 <div data-note="g2" class="open-note top g g2"></div>
                 <div data-note="g-sharp-2" class="note top g-sharp g-sharp-2"></div>
                 <div data-note="a2" class="note top a a2"></div>
@@ -45,7 +63,9 @@
                 <div data-note="g4" class="note top g g3"></div>
             </div>
             <div class="d-string-container">
-                <div class="letter-box"><p>D</p></div>
+                <div class="letter-box">
+                    <p>D</p>
+                </div>
                 <div data-note="d2" class="open-note d d2"></div>
                 <div data-note="d-sharp-2" class="note d-sharp d-sharp-2"></div>
                 <div data-note="e2" class="note e e2"></div>
@@ -61,7 +81,9 @@
                 <div data-note="d3" class="note d d3"></div>
             </div>
             <div class="a-string-container">
-                <div class="letter-box"><p>A</p></div>
+                <div class="letter-box">
+                    <p>A</p>
+                </div>
                 <div data-note="a1" class="open-note a a1"></div>
                 <div data-note="a-sharp-1" class="note a-sharp a-sharp-1"></div>
                 <div data-note="b1" class="note b b1"></div>
@@ -77,7 +99,9 @@
                 <div data-note="a2" class="note a a2"></div>
             </div>
             <div class="e-string-container">
-                <div class="letter-box"><p>E</p></div>
+                <div class="letter-box">
+                    <p>E</p>
+                </div>
                 <div data-note="e1" class="open-note bottom e e1"></div>
                 <div data-note="f1" class="note bottom f f1"></div>
                 <div data-note="f-sharp-1" class="note bottom f-sharp f-sharp-1"></div>
