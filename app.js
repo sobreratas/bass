@@ -4,8 +4,69 @@ const noteName = document.querySelector(".note-name");
 const image = document.querySelector("img");
 const closeBtn = document.querySelector(".close-btn");
 const modal = document.querySelector(".modal");
+const dot = document.querySelector(".dot");
 
-closeBtn.addEventListener('click', function(){
+const noteNameClassesForNoteTextDisplay = ["E", "F", "F#/Gb", "G", "G#/Ab", "A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb"]
+
+const noteNameClassesForStaffDisplay = ["e1", "f1", "f-sharp-1", "g1", "g-sharp-1", "a1", "a-sharp-1", "b1", "c2", "c-sharp-2", "d2", "d-sharp-2", "e2",
+    "f2", "f-sharp-2", "g2", "g-sharp-2", "a2", "a-sharp-2", "b2", "c3", "c-sharp-3", "d3", "d-sharp-3", "e3", "f3", "f-sharp-3", "g3"]
+
+const uniqueNoteNameClassesForDotDisplay = [
+    "e-string-low-e",
+    "e-string-f",
+    "e-string-f-sharp",
+    "e-string-g",
+    "e-string-g-sharp",
+    "e-string-a",
+    "e-string-a-sharp",
+    "e-string-b",
+    "e-string-c",
+    "e-string-c-sharp",
+    "e-string-d",
+    "e-string-d-sharp",
+    "e-string-high-e",
+    "a-string-low-a",
+    "a-string-a-sharp",
+    "a-string-b",
+    "a-string-c",
+    "a-string-c-sharp",
+    "a-string-d",
+    "a-string-d-sharp",
+    "a-string-e",
+    "a-string-f",
+    "a-string-f-sharp",
+    "a-string-g",
+    "a-string-g-sharp",
+    "a-string-high-a",
+    "d-string-low-d",
+    "d-string-d-sharp",
+    "d-string-e",
+    "d-string-f",
+    "d-string-f-sharp",
+    "d-string-g",
+    "d-string-g-sharp",
+    "d-string-a",
+    "d-string-a-sharp",
+    "d-string-b",
+    "d-string-c",
+    "d-string-c-sharp",
+    "d-string-high-d",
+    "g-string-low-g",
+    "g-string-g-sharp",
+    "g-string-a",
+    "g-string-a-sharp",
+    "g-string-b",
+    "g-string-c",
+    "g-string-c-sharp",
+    "g-string-d",
+    "g-string-d-sharp",
+    "g-string-e",
+    "g-string-f",
+    "g-string-f-sharp",
+    "g-string-high-g"
+]
+
+closeBtn.addEventListener('click', function () {
     modal.classList.add("hidden");
 })
 
@@ -14,6 +75,8 @@ for (let note of notes) {
         playNote(note);
         changeNoteName(e);
         changePicture(e);
+        showDot(e);
+
     })
 }
 
@@ -27,100 +90,12 @@ function playNote(note) {
     })
 }
 
-function changePicture(e) {
-    if (e.target.classList.contains("e1")) {
-        image.setAttribute('src', "images/e1.png")
-    } else if (e.target.classList.contains("f1")) {
-        image.setAttribute('src', "images/f1.png")
-    } else if (e.target.classList.contains("f-sharp-1")) {
-        image.setAttribute('src', "images/f-sharp-1.png")
-    } else if (e.target.classList.contains("g1")) {
-        image.setAttribute('src', "images/g1.png")
-    } else if (e.target.classList.contains("g-sharp-1")) {
-        image.setAttribute('src', "images/g-sharp-1.png")
-    } else if (e.target.classList.contains("a1")) {
-        image.setAttribute('src', "images/a1.png")
-    } else if (e.target.classList.contains("a-sharp-1")) {
-        image.setAttribute('src', "images/a-sharp-1.png")
-    } else if (e.target.classList.contains("b1")) {
-        image.setAttribute('src', "images/b1.png")
-    } else if (e.target.classList.contains("c2")) {
-        image.setAttribute('src', "images/c2.png")
-    } else if (e.target.classList.contains("c-sharp-2")) {
-        image.setAttribute('src', "images/c-sharp-2.png")
-    } else if (e.target.classList.contains("d2")) {
-        image.setAttribute('src', "images/d2.png")
-    } else if (e.target.classList.contains("d-sharp-2")) {
-        image.setAttribute('src', "images/d-sharp-2.png")
-    } else if (e.target.classList.contains("e2")) {
-        image.setAttribute('src', "images/e2.png")
-    } else if (e.target.classList.contains("f2")) {
-        image.setAttribute('src', "images/f2.png")
-    } else if (e.target.classList.contains("f-sharp-2")) {
-        image.setAttribute('src', "images/f-sharp-2.png")
-    } else if (e.target.classList.contains("g2")) {
-        image.setAttribute('src', "images/g2.png")
-    } else if (e.target.classList.contains("g-sharp-2")) {
-        image.setAttribute('src', "images/g-sharp-2.png")
-    } else if (e.target.classList.contains("a2")) {
-        image.setAttribute('src', "images/a2.png")
-    } else if (e.target.classList.contains("a-sharp-2")) {
-        image.setAttribute('src', "images/a-sharp-2.png")
-    } else if (e.target.classList.contains("b2")) {
-        image.setAttribute('src', "images/b2.png")
-    } else if (e.target.classList.contains("c3")) {
-        image.setAttribute('src', "images/c3.png")
-    } else if (e.target.classList.contains("c-sharp-3")) {
-        image.setAttribute('src', "images/c-sharp-3.png")
-    } else if (e.target.classList.contains("d3")) {
-        image.setAttribute('src', "images/d3.png")
-    } else if (e.target.classList.contains("d-sharp-3")) {
-        image.setAttribute('src', "images/d-sharp-3.png")
-    } else if (e.target.classList.contains("e3")) {
-        image.setAttribute('src', "images/e3.png")
-    } else if (e.target.classList.contains("f3")) {
-        image.setAttribute('src', "images/f3.png")
-    } else if (e.target.classList.contains("f-sharp-3")) {
-        image.setAttribute('src', "images/f-sharp-3.png")
-    } else if (e.target.classList.contains("g3")) {
-        image.setAttribute('src', "images/g3.png")
-    }
-}
-
-function changeNoteName(e) {
-    if (e.target.classList.contains("e")) {
-        noteName.innerHTML = "E"
-    } else if (e.target.classList.contains("f")) {
-        noteName.innerHTML = "F"
-    } else if (e.target.classList.contains("f-sharp")) {
-        noteName.innerHTML = "F#/Gb"
-    } else if (e.target.classList.contains("g")) {
-        noteName.innerHTML = "G"
-    } else if (e.target.classList.contains("g-sharp")) {
-        noteName.innerHTML = "G#/Ab"
-    } else if (e.target.classList.contains("a")) {
-        noteName.innerHTML = "A"
-    } else if (e.target.classList.contains("a-sharp")) {
-        noteName.innerHTML = "A#/Bb"
-    } else if (e.target.classList.contains("b")) {
-        noteName.innerHTML = "B"
-    } else if (e.target.classList.contains("c")) {
-        noteName.innerHTML = "C"
-    } else if (e.target.classList.contains("c-sharp")) {
-        noteName.innerHTML = "C#/Db"
-    } else if (e.target.classList.contains("d")) {
-        noteName.innerHTML = "D"
-    } else if (e.target.classList.contains("d-sharp")) {
-        noteName.innerHTML = "D#/Eb"
-    }
-
-}
-
 for (let openNote of openNotes) {
     openNote.addEventListener('click', function (e) {
         playOpenNote(openNote);
         changeNoteName(e);
         changePicture(e);
+        showDot(e);
     })
 }
 
@@ -132,5 +107,39 @@ function playOpenNote(openNote) {
     openNoteAudio.addEventListener('ended', function () {
         openNote.classList.remove('active');
     })
+}
 
+function changePicture(e) {
+    let clickedNoteName = e.target.classList;
+
+    for (let i = 0; i < noteNameClassesForStaffDisplay.length; i++) {
+        if (clickedNoteName.contains(noteNameClassesForStaffDisplay[i])) {
+            image.setAttribute('src', `images/${noteNameClassesForStaffDisplay[i]}.png`)
+        }
+    }
+}
+
+function changeNoteName(e) {
+    for (let i = 0; i < noteNameClassesForNoteTextDisplay.length; i++) {
+        let clickedNoteName = e.target.classList;
+
+        if (clickedNoteName.contains(noteNameClassesForNoteTextDisplay[i])) {
+            noteName.innerHTML = noteNameClassesForNoteTextDisplay[i];
+        }
+    }
+}
+
+
+function showDot(e) {
+    let clickedNoteName = e.target.classList;
+    for (let i = 0; i < uniqueNoteNameClassesForDotDisplay.length; i++) {
+        if (clickedNoteName.contains(uniqueNoteNameClassesForDotDisplay[i])) {
+            let noteOfDot = document.querySelector(`.${uniqueNoteNameClassesForDotDisplay[i]}-dot`);
+            noteOfDot.style.visibility = "visible"
+            setTimeout(() => {
+                noteOfDot.style.visibility = "hidden"
+            }, 400)
+        }
+
+    }
 }

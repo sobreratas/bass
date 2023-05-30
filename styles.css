@@ -27,7 +27,7 @@ h1 {
 }
 
 .modal {
-    height: 300px;
+    height: 250px;
     width: 600px;
     background-color: rgb(167, 214, 255);
     font-family: Inter, sans-serif;
@@ -63,11 +63,81 @@ h1 {
     box-shadow: 1px -1px 18px 1px rgba(117, 117, 117, 0.75);
     -webkit-box-shadow: 1px -1px 18px 1px rgba(117, 117, 117, 0.75);
     -moz-box-shadow: 1px -1px 18px 1px rgba(117, 117, 117, 0.75);
+    visibility: visible;
+    
 }
 
 .modal-container.hidden {
     visibility: hidden;
 }
+
+ /* DOTS STYLING */
+ .e-string-low-e-dot,
+.e-string-f-dot,
+.e-string-f-sharp-dot,
+.e-string-g-dot,
+.e-string-g-sharp-dot,
+.e-string-a-dot,
+.e-string-a-sharp-dot,
+.e-string-b-dot,
+.e-string-c-dot,
+.e-string-c-sharp-dot,
+.e-string-d-dot,
+.e-string-d-sharp-dot,
+.e-string-high-e-dot,
+
+.a-string-low-a-dot,
+.a-string-a-sharp-dot,
+.a-string-b-dot,
+.a-string-c-dot,
+.a-string-c-sharp-dot,
+.a-string-d-dot,
+.a-string-d-sharp-dot,
+.a-string-e-dot,
+.a-string-f-dot,
+.a-string-f-sharp-dot,
+.a-string-g-dot,
+.a-string-g-sharp-dot,
+.a-string-high-a-dot,
+
+.d-string-low-d-dot,
+.d-string-d-sharp-dot,
+.d-string-e-dot,
+.d-string-f-dot,
+.d-string-f-sharp-dot,
+.d-string-g-dot,
+.d-string-g-sharp-dot,
+.d-string-a-dot,
+.d-string-a-sharp-dot,
+.d-string-b-dot,
+.d-string-c-dot,
+.d-string-c-sharp-dot,
+.d-string-high-d-dot,
+
+.g-string-low-g-dot,
+.g-string-g-sharp-dot,
+.g-string-a-dot,
+.g-string-a-sharp-dot,
+.g-string-b-dot,
+.g-string-c-dot,
+.g-string-c-sharp-dot,
+.g-string-d-dot,
+.g-string-d-sharp-dot,
+.g-string-e-dot,
+.g-string-f-dot,
+.g-string-f-sharp-dot,
+.g-string-high-g-dot
+
+{
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    visibility: hidden;  
+}
+
+
 
 .close-btn {
     position: absolute;
