@@ -135,6 +135,9 @@ h1 {
     border-radius: 50%;
     position: absolute;
     visibility: hidden;  
+    box-shadow: 3px -1px 22px 7px rgba(255,186,0,0.75);
+    -webkit-box-shadow: 3px -1px 22px 7px rgba(255,186,0,0.75);
+    -moz-box-shadow: 3px -1px 22px 7px rgba(255,186,0,0.75);
 }
 
 
